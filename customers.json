@@ -1,0 +1,374 @@
+  { "customer" :
+  [
+  {
+  "compId" : 1,
+  "comptName" : "stacktronic",
+  "compAddress" : "1 lakeshore rd",
+  "compContact" : "647-333-4444",
+  "compPhone" : "647-333-4444",
+  "compEmail" : "stacktronic@gmail.com",
+  "invoice" : [
+    {
+      "invNumber" : "C123",
+      "invDate" : "15 July 2015",
+      "invAmt" : "$300",
+      "compId" : 1,
+      "product" : [
+        {
+          "prodId" : 1,
+          "qty": 2,
+          "prodDiscr" : "Epson printer",
+          "prodAmt" : "$90"
+        },
+        {
+          "prodId" : 2,
+          "qty" : 1,
+          "prodDiscr" : "REIDEA Projector Screen",
+          "prodAmt" : "$99"
+        }
+      ]
+    },
+    {
+      "invNumber" : "B234",
+      "invDate" : "13 January 2014",
+      "invAmt" : "$300",
+      "compId" : 1,
+      "product" : [
+        {
+          "prodId" : 3,
+          "qty" : 3,
+          "prodDiscr" : "Panasonic Expandable Cordless Phone",
+          "prodAmt" : "$128"
+        },
+        {
+          "prodId" : 4,
+          "qty" : 3,
+          "prodDiscr" : "Foreign Language Translator",
+          "prodAmt" : "$34"
+        }
+      ]
+    },
+    {
+      "invNumber" : "B444",
+      "invDate" : "31 October 2017",
+      "invAmt" : "$267",
+      "compId" : 1,
+      "product" : [
+        {
+          "prodId" : 5,
+          "qty" : 3,
+          "prodDiscr" : "8-Sheet cross-cut paper shredder",
+          "prodAmt" : "$49"
+        },
+        {
+          "prodId" : 6,
+          "qty" : 3,
+          "prodDiscr" : "Kodak Digitl Film and Slide Scanner",
+          "prodAmt" : "$45"
+        },
+        {
+          "prodId" : 7,
+          "qty" : 3,
+          "prodDiscr" : "WPT-150 Electronic Typewriter",
+          "prodAmt" : "$42"
+        }
+      ]
+    }
+  ]
+  },
+
+
+
+
+  {
+  "compId" : 2,
+  "comptName" : "efury",
+  "compAddress" : "3 Mississauga rd",
+  "compContact" : "",
+  "compPhone" : "905-222-3333",
+  "compEmail" : "efury@gmail.com",
+  "invoice" :
+  [
+    {
+      "invNumber" : "B123",
+      "invDate" : "23 September 2013",
+      "invAmt" : "$200",
+      "compId" : 2,
+      "product" : [
+        {
+          "prodId" : 1,
+          "qty" : 3,
+          "prodDiscr" : "Epson printer",
+          "prodAmt" : 20
+        },
+        {
+          "prodId" : 8,
+          "qty" : 3,
+          "prodDiscr" : "iphone X",
+          "prodAmt" : 34
+        }
+      ]
+    },
+    {
+      "invNumber" : "B1443",
+      "invDate" : "1 October 2013",
+      "invAmt" : "$444",
+      "compId" : 2,
+      "product" : [
+        {
+          "prodId" : 9,
+          "qty" : 3,
+          "prodDiscr" : "Samsung TV",
+          "prodAmt" : 34
+        },
+        {
+          "prodId" : 10,
+          "qty" : 3,
+          "prodDiscr" : "Microsoft Office 2016",
+          "prodAmt" : 78
+        }
+      ]
+    },
+    {
+      "invNumber" : "V143",
+      "invDate" : "4 Novemver 2013",
+      "invAmt" : "$273",
+      "compId" : 2,
+      "product" : [
+        {
+          "prodId" : 11,
+          "qty" : 3,
+          "prodDiscr" : "Apple Mouse",
+          "prodAmt" : 54
+        },
+        {
+          "prodId" : 10,
+          "qty" : 3,
+          "prodDiscr" : "Microsoft Office 2016",
+          "prodAmt" : 78
+        }
+      ]
+    }
+  ]
+  },
+
+
+
+
+  {
+  "compId" : 3,
+  "comptName" : "buzztronic",
+  "compAddress" : "54 bryte Avenue",
+  "compContact" : "",
+  "compPhone" : "905-676-9900",
+  "compEmail" : "buzztronic@gmail.com",
+  "invoice" :
+  [
+    {
+    "invNumber" : "B124",
+    "invDate" : "19 May 2014",
+    "invAmt" : "$4546.99",
+    "compId" : 3,
+    "product" : [
+      {
+        "prodId" : 12,
+        "qty" : 3,
+        "prodDiscr" : "Genie Desktop Calculator",
+        "prodAmt" : 7
+      },
+      {
+        "prodId" : 13,
+        "qty" : 3,
+        "prodDiscr" : "IKONG Compatible Ink Cartridge",
+        "prodAmt" : 67
+      }
+    ]
+    },
+    {
+    "invNumber" : "B1994",
+    "invDate" : "2 March 2014",
+    "invAmt" : "$880.99",
+    "product" : [
+      {
+        "prodId" : 12,
+        "qty" : 3,
+        "prodDiscr" : "Genie Desktop Calculator",
+        "prodAmt" : 7
+      },
+      {
+        "prodId" : 13,
+        "qty" : 3,
+        "prodDiscr" : "IKONG Compatible Ink Cartridge",
+        "prodAmt" : 67
+      }
+      ]
+    },
+    {
+    "invNumber" : "B124",
+    "invDate" : "19 May 2014",
+    "invAmt" : "$4546.99",
+    "product" : [
+      {
+        "prodId" : 12,
+        "qty" : 3,
+        "prodDiscr" : "Genie Desktop Calculator",
+        "prodAmt" : 7
+      },
+      {
+        "prodId" : 13,
+        "qty" : 3,
+        "prodDiscr" : "IKONG Compatible Ink Cartridge",
+        "prodAmt" : 67
+      }
+      ]
+    }
+    ]
+    },
+
+
+
+
+
+    {
+    "compId" : 4,
+    "comptName" : "tronify",
+    "compAddress" : "45 stavebank street",
+    "compContact" : "",
+    "compPhone" : "",
+    "compEmail" : "tronify@gmail.com",
+    "invoice" :
+    [
+      {
+      "invNumber" : "B124",
+      "invDate" : "19 May 2014",
+      "invAmt" : "$4546.99",
+      "compId" : 4,
+      "product" : [
+        {
+          "prodId" : 12,
+          "qty" : 3,
+          "prodDiscr" : "Genie Desktop Calculator",
+          "prodAmt" : 7
+        },
+        {
+          "prodId" : 13,
+          "qty" : 3,
+          "prodDiscr" : "IKONG Compatible Ink Cartridge",
+          "prodAmt" : 67
+        }
+      ]
+    },
+    {
+    "invNumber" : "B1994",
+    "invDate" : "2 March 2014",
+    "invAmt" : "$880.99",
+    "product" : [
+      {
+        "prodId" : 12,
+        "qty" : 3,
+        "prodDiscr" : "Genie Desktop Calculator",
+        "prodAmt" : 7
+      },
+      {
+        "prodId" : 13,
+        "qty" : 3,
+        "prodDiscr" : "IKONG Compatible Ink Cartridge",
+        "prodAmt" : 67
+      }
+      ]
+    },
+    {
+    "invNumber" : "B124",
+    "invDate" : "19 May 2014",
+    "invAmt" : "$4546.99",
+    "product" : [
+      {
+        "prodId" : 12,
+        "qty" : 3,
+        "prodDiscr" : "Genie Desktop Calculator",
+        "prodAmt" : 7
+      },
+      {
+        "prodId" : 13,
+        "qty" : 3,
+        "prodDiscr" : "IKONG Compatible Ink Cartridge",
+        "prodAmt" : 67
+      }
+      ]
+    }
+    ]
+    },
+
+    {
+    "compId" : 5,
+    "comptName" : "visitronix",
+    "compAddress" : "4 maple rd",
+    "compContact" : "",
+    "compPhone" : "905-590-5599",
+    "compEmail" : "visitronix@gmail.com",
+    "invoice" :
+    [
+      {
+      "invNumber" : "B125",
+      "invDate" : "8 June 2014",
+      "invAmt" : "$4586.88",
+      "compId" : 5,
+      "product" : [
+        {
+          "prodId" : 13,
+          "qty" : 3,
+          "prodDiscr" : "Apple ipad",
+          "prodAmt" : 9
+        },
+        {
+          "prodId" : 14,
+          "qty" : 3,
+          "prodDiscr" : "Asus router",
+          "prodAmt" : 79
+        }
+      ]
+    },
+    {
+    "invNumber" : "O194",
+    "invDate" : "8 August 2014",
+    "invAmt" : "$877.99",
+    "product" : [
+      {
+        "prodId" : 15,
+        "qty" : 3,
+        "prodDiscr" : "Lenovo IdeaPad Y580",
+        "prodAmt" : 7
+      },
+      {
+        "prodId" : 14,
+        "qty" : 3,
+        "prodDiscr" : "Asus router",
+        "prodAmt" : 79
+      }
+      ]
+    },
+    {
+    "invNumber" : "B124",
+    "invDate" : "19 September 2015",
+    "invAmt" : "$454.99",
+    "product" : [
+      {
+        "prodId" : 12,
+        "qty" : 3,
+        "prodDiscr" : "Genie Desktop Calculator",
+        "prodAmt" : 7
+      },
+      {
+        "prodId" : 13,
+        "qty" : 3,
+        "prodDiscr" : "IKONG Compatible Ink Cartridge",
+        "prodAmt" : 67
+      }
+      ]
+    }
+    ]
+    }
+
+
+  ]
+  }
