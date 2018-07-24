@@ -4,6 +4,7 @@
 	<meta name="computer shop" type="text/html">
 	<meta charset="utf-8">
 	<title>custom Electronics</title>
+  <link rel="stylesheet" href="./css/main.css" />
 	<link rel="stylesheet" href="./css/jqm/themes/theme.min.css" />
 	<link rel="stylesheet" href="./css/jqm/themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
@@ -13,6 +14,106 @@
 	<script src="./JS/handler.js"></script>
 </head>
 <body>
+
+	<!-- page -->
+	<div data-role="page" id="mainPage" data-theme="a">
+		<div data-role="header" data-position="inline">
+			<img src="img/logo.png" height="300px" width="100%">
+		</div>
+
+		<!-- navbar -->
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#mainPage" class="ui-btn ui-btn-inline" data-transition="pop"> home</a></li>
+					<li><a href="#customers" data-transition="pop">Customers</a></li>
+					<li><a href="#products" data-transition="pop">Products</a></li>
+			</ul>
+		</div>
+
+		<!-- content -->
+		<div data-role="content">
+			<section class='ui-grid-a'>
+				<section id='main'> </section>
+				<div id='column1' class='ui-block-a'>
+				</div>
+				<div id='column2' class='ui-block-b'>
+				</div>
+			</section>
+		</div>
+
+
+		<!-- footer -->
+		<div data-role="footer" data-position="inline">
+			<p> <span class="pageFooter"> </span></p>
+			<footer><a href="#contactus" data-transition="flip">Contact us</a></footer>
+		</div>
+
+	</div> <!-- end of the page -->
+
+<!-- customer page -->
+	<div data-role="page" id="customers" data-title="customers">
+		<div data-role="header">
+			<img src="img/logo.png" height="300px" width="100%">
+			</div>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#mainPage" class="ui-btn ui-btn-inline" data-transition="pop"> home</a></li>
+						<li><a href="#customers" data-transition="pop">Customers</a></li>
+						<li><a href="#products" data-transition="pop">Products</a></li>
+				</ul>
+			</div>
+
+		<div role="main" class="ui-content">
+</div>
+		<div data-role="footer">
+			<p> <span class="pageFooter"> </span></p>
+		</div>
+	</div>
+
+
+<!-- product page -->
+	<div data-role="page" id="products" data-title="customers">
+		<div data-role="header">
+			<img src="img/logo.png" height="300px" width="100%">
+			</div>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#mainPage" class="ui-btn ui-btn-inline" data-transition="pop"> home</a></li>
+						<li><a href="#customers" data-transition="pop">Customers</a></li>
+						<li><a href="#products" data-transition="pop">Products</a></li>
+				</ul>
+			</div>
+
+
+		<div role="main" class="ui-content">
+</div>
+		<div data-role="footer">
+			<p> <span class="pageFooter"> </span></p>
+		</div>
+	</div>
+
+
+<!-- contact page -->
+	<div data-role="page" id="contactus" data-title="customers">
+		<div data-role="header">
+			<img src="img/logo.png" height="300px" width="100%">
+			</div>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#mainPage" class="ui-btn ui-btn-inline" data-transition="pop"> home</a></li>
+						<li><a href="#customers" data-transition="pop">Customers</a></li>
+						<li><a href="#products" data-transition="pop">Products</a></li>
+				</ul>
+			</div>
+
+		<div role="main" class="ui-content">
+			<p class="contactContent">Email: </p> <br>
+			<p class="contactContent">Address: </p> <br>
+			<p class="contactContent">Hours: </p> <br>
+			<p class="contactContent">Our location: </p> <br>
+
+</div>
+	</div>
 	<div data-role="page" data-theme="a">
 		<div data-role="header" data-position="inline">
 			<h1>Computer calls</h1>
