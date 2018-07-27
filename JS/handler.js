@@ -14,6 +14,7 @@ function display(customer) {
   }
 }
 
+
 $(document).ready(()=>{
 
   $.ajax({
@@ -29,8 +30,11 @@ $(document).ready(()=>{
     //Customer is an array of of cusotmers
     let customer = JsonObj.customer;
 
+
+
     for (let i = 0 ; i < numCustomers ; i++) {
         let id = customer[i].compId;
+
 
            $("#customerHNav").append("<section class='list ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow' id='p"+n+"'" +
            '<div>' + customer[i].comptName + '</div>'  + "</section><br />");
@@ -43,6 +47,11 @@ $(document).ready(()=>{
            $("#d" + n).hide();			// hide the content div
            checkDisplay(n);			// check to see if the company section is clicked
            n++;
+
+
+        $('#customerHNav').append( '<div id="cust_' + id + '">' + '<a href="#custInfo_'+ id +
+         '" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow">' +
+           customer[i].comptName + ' ('+ id +')' +'</a></div>');
 
     }
   }
@@ -59,6 +68,7 @@ $(document).ready(()=>{
 
     for (let i = 0 ; i < products.length ; i++) {
 
+
          $("#productHNav").append("<section class='list ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow' id='p"+n+"'" +
          '<div>ID: ' + products[i].prodId + ': </div>'  +
          products[i].prodDiscr + ' ('+ products[i].prodAmt +')'+ "</section><br />");
@@ -73,8 +83,12 @@ $(document).ready(()=>{
          checkDisplay(n);			// check to see if the product section is clicked
          n++;
 
-    }
+      //productHNav
+      $('#productHNav').append( '<div id="prod_' + products[i].prodId + '">' + '<a href="#custInfo_'+ products[i].prodId +
+       '" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow">' +
+         products[i].prodDiscr + ' ('+ products[i].prodAmt +')' +'</a></div>');
 
+    }
   }
 
 
