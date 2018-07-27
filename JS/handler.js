@@ -1,3 +1,5 @@
+var n=1;
+
 function display(customer) {
   let name = customer.comptName;
   let address = customer.compAddress;
@@ -29,13 +31,19 @@ $(document).ready(()=>{
 
     for (let i = 0 ; i < numCustomers ; i++) {
         let id = customer[i].compId;
-        $('#customerHNav').append( '<div id="cust_' + id + '">' + '<a href="#custInfo_'+ id +
-         '" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow" onclick="display(' +  customer[i] +')">' +
-           customer[i].comptName + ' ('+ id +')' +'</a></div>');
 
-        //Find a way to create a drop down page to append the rest of inforamtion
-        // $('#cust_'+id).append('<div class="customerInfo" data-role="page" id="custInfo_' + id + '">' +
-        //  '<div role="main" class="ui-content"> HI</div></div>');
+           $("#customerHNav").append("<section class='list ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow' id='p"+n+"'" +
+           '<div>' + customer[i].comptName + '</div>'  + "</section><br />");
+
+           //PLEASE WORK ON PARSING HERE
+           //PLEASE WORK ON PARSING HERE
+          //PLEASE WORK ON PARSING HERE
+           $("#customerHNav").append("<article id='d"+n+"'>" + "<p>work on the parsing later</p>"+  "</article><br />");
+
+           $("#d" + n).hide();			// hide the content div
+           checkDisplay(n);			// check to see if the company section is clicked
+           n++;
+
     }
   }
 
@@ -50,13 +58,32 @@ $(document).ready(()=>{
     let products = JsonObj.product;
 
     for (let i = 0 ; i < products.length ; i++) {
-      //productHNav
-      $('#productHNav').append( '<div id="prod_' + products[i].prodId + '">' + '<a href="#custInfo_'+ products[i].prodId +
-       '" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow" onclick="prodDisplay(' +  products[i] +')">' +
-         products[i].prodDiscr + ' ('+ products[i].prodAmt +')' +'</a></div>');
+
+         $("#productHNav").append("<section class='list ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow' id='p"+n+"'" +
+         '<div>ID: ' + products[i].prodId + ': </div>'  +
+         products[i].prodDiscr + ' ('+ products[i].prodAmt +')'+ "</section><br />");
+
+          //PLEASE WORK ON PARSING HERE
+          //PLEASE WORK ON PARSING HERE
+         //PLEASE WORK ON PARSING HERE
+         // create a list of invoices/content under each product
+         $("#productHNav").append("<article id='d"+n+"'>" + "<p>work on the parsing later</p>"+  "</article><br />");
+
+         $("#d" + n).hide();			// hide the content div
+         checkDisplay(n);			// check to see if the product section is clicked
+         n++;
 
     }
 
   }
 
+
+
 });//Document ready end
+
+function checkDisplay(n) {
+  $("#p"+n).click(function(){					// which product name section is clicked
+    $("article:not([id$='"+n+"'])").hide("slow");	// hide all that do not end in clicked section ($=)
+    $("#d"+n).toggle("fast");				// toggle (show/hide) content div
+  });
+}
