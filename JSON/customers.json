@@ -1,51 +1,48 @@
-  { "customer" :
-    [
-      {
-      "compId" : 1,
-      "comptName" : "stacktronic",
-      "compAddress" : "1 lakeshore rd",
-      "compContact" : "647-333-4444",
-      "compPhone" : "647-333-4444",
-      "compEmail" : "stacktronic@gmail.com",
-      "invoice" : ["C123","B234","B444"]
+  {
+    "customer": [{
+        "compId": 1,
+        "comptName": "stacktronic",
+        "compAddress": "1 lakeshore rd",
+        "compContact": "647-333-4444",
+        "compPhone": "647-333-4444",
+        "compEmail": "stacktronic@gmail.com",
+        "invoice": ["C123", "B234", "B444"]
       },
       {
-        "compId" : 2,
-        "comptName" : "efury",
-        "compAddress" : "3 Mississauga rd",
-        "compContact" : "905-222-3333",
-        "compPhone" : "905-222-3333",
-        "compEmail" : "efury@gmail.com",
-        "invoice" :  [ "B134","A544","J888"]
+        "compId": 2,
+        "comptName": "efury",
+        "compAddress": "3 Mississauga rd",
+        "compContact": "905-222-3333",
+        "compPhone": "905-222-3333",
+        "compEmail": "efury@gmail.com",
+        "invoice": ["B134", "A544", "J888"]
       },
       {
-        "compId" : 3,
-        "comptName" : "buzztronic",
-        "compAddress" : "54 bryte Avenue",
-        "compContact" : "905-676-9900",
-        "compPhone" : "905-676-9900",
-        "compEmail" : "buzztronic@gmail.com",
-        "invoice" :
-          ["122K","H777","9JJJ"]
+        "compId": 3,
+        "comptName": "buzztronic",
+        "compAddress": "54 bryte Avenue",
+        "compContact": "905-676-9900",
+        "compPhone": "905-676-9900",
+        "compEmail": "buzztronic@gmail.com",
+        "invoice": ["122K", "H777", "9JJJ"]
       },
       {
-        "compId" : 4,
-        "comptName" : "tronify",
-        "compAddress" : "45 stavebank street",
-        "compContact" : "905-676-5322",
-        "compPhone" : "905-676-4432",
-        "compEmail" : "tronify@gmail.com",
-        "invoice" :
-          ["L999","I876","N728"]
+        "compId": 4,
+        "comptName": "tronify",
+        "compAddress": "45 stavebank street",
+        "compContact": "905-676-5322",
+        "compPhone": "905-676-4432",
+        "compEmail": "tronify@gmail.com",
+        "invoice": ["L999", "I876", "N728"]
       },
       {
-        "compId" : 5,
-        "comptName" : "visitronix",
-        "compAddress" : "4 maple rd",
-        "compContact" : "905-676-9901",
-        "compPhone" : "905-590-5599",
-        "compEmail" : "visitronix@gmail.com",
-        "invoice" :["V639","L937","K638"]
+        "compId": 5,
+        "comptName": "visitronix",
+        "compAddress": "4 maple rd",
+        "compContact": "905-676-9901",
+        "compPhone": "905-590-5599",
+        "compEmail": "visitronix@gmail.com",
+        "invoice": ["V639", "L937", "K638"]
       }
     ]
   }
