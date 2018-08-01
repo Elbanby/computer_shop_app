@@ -7,13 +7,7 @@
       "compContact" : "647-333-4444",
       "compPhone" : "647-333-4444",
       "compEmail" : "stacktronic@gmail.com",
-      "invoice" : [
-          {
-            "invNumber":"C123",
-            "invNumber":"B234",
-            "invNumber":"B444"
-          }
-        ]
+      "invoice" : ["C123","B234","B444"]
       },
       {
         "compId" : 2,
@@ -22,19 +16,8 @@
         "compContact" : "905-222-3333",
         "compPhone" : "905-222-3333",
         "compEmail" : "efury@gmail.com",
-        "invoice" :
-          [
-            {
-              "invNumber":"B134",
-              "invNumber":"A544",
-              "invNumber":"J888"
-            }
-          ]
+        "invoice" :  [ "B134","A544","J888"]
       },
-
-
-
-
       {
         "compId" : 3,
         "comptName" : "buzztronic",
@@ -43,13 +26,7 @@
         "compPhone" : "905-676-9900",
         "compEmail" : "buzztronic@gmail.com",
         "invoice" :
-          [
-            {
-              "invNumber":"122K",
-              "invNumber":"H777",
-              "invNumber":"9JJJ"
-            }
-          ]
+          ["122K","H777","9JJJ"]
       },
       {
         "compId" : 4,
@@ -59,13 +36,7 @@
         "compPhone" : "905-676-4432",
         "compEmail" : "tronify@gmail.com",
         "invoice" :
-          [
-            {
-              "invNumber":"L999",
-              "invNumber":"I876",
-              "invNumber":"N728"
-            }
-          ]
+          ["L999","I876","N728"]
       },
       {
         "compId" : 5,
@@ -74,14 +45,7 @@
         "compContact" : "905-676-9901",
         "compPhone" : "905-590-5599",
         "compEmail" : "visitronix@gmail.com",
-        "invoice" :
-          [
-            {
-              "invNumber":"V639",
-              "invNumber":"L937",
-              "invNumber":"K638"
-            }
-          ]
+        "invoice" :["V639","L937","K638"]
       }
     ]
   }
