@@ -52,8 +52,9 @@ $(document).ready(() => {
       $("#d" + n).append("<p class='customer_info'>Customer Name: &nbsp;" + customer[i].comptName +
             "<br>Company Id:  &nbsp;" + customer[i].compId + "<br>Company Contact: &nbsp; " +
             customer[i].compContact + "<br>CompanyPhone:  &nbsp;" + customer[i].compPhone + "</p>");
-      $("#d" + n).append("<section class='ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all> '<div> Email </div> </section>");
+      $("#d" + n).append("<section class='ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all'> <div> <a style='text-decoration: none;' href='mailto:" + customer[i].compEmail + "'>Email</a> </div></section>");
       $("#d" + n).append("<section class='ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all>'<div> map </div> </section>");
+
 
       $("#d" + n).append("<div>Invoices for " + customer[i].comptName + "</div>");
 
