@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/jqm/themes/theme.min.css" />
+    <link rel="stylesheet" href="./css/jqm/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script async defe
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT7WVWQOZc8i3TRAF2yIWp1yOwQaH5_ns&callback=initMap">
+    </script>
+  </head>
+  <body>
+    <div data-role="page" id="map-page" data-url="map-page">
+        <div data-role="header" data-theme="a">
+        <h1>Map</h1>
+        </div>
+        <div role="main" class="ui-content" id="map" style="width:50%;height:400px;background:yellow;margin: auto;">
+            <!-- map loads here... -->
+        </div>
+    </div>
+
+    <script>
+    var map;
+    var marker;
+//
+    function initMap() {
+      console.log("hERE");
+      window.onload = function() {
+        //Retrive the location of the map
+        let mapTag = document.getElementById('map');
+        //create a map object literal
+        var mapPosition = {
+          center: {
+            lat: 37.791350,
+            lng: -122.435883
+          },
+          zoom: 20
+        }
+        //New create the map and display it
+        map = new google.maps.Map(mapTag, mapPosition);
+
+        //Create a marker position object
+        var markerPosition = {
+          position: mapPosition.center,
+          map: map
+        }
+        //Now create a marker
+        marker = new google.maps.Marker(markerPosition);
+
+      }
+    }
+
+    </script>
+  </body>
+</html>
