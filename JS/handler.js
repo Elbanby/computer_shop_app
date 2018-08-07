@@ -70,7 +70,13 @@ function parseCutomers(JsonObj) {
     //For each invoice Id, search invoice.json for the equiviliant id and print it out
     $("#d" + n).append("<p class='customer_info'>Customer Name: &nbsp;" + customer[i].comptName + "<br>Company Id:  &nbsp;" + customer[i].compId + "<br>Company Contact: &nbsp; " + customer[i].compContact + "<br>CompanyPhone:  &nbsp;" + customer[i].compPhone + "</p>");
     $("#d" + n).append("<section class='ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all'> <div> <a style='text-decoration: none; color: white;' href='mailto:" + customer[i].compEmail + "'>Email</a> </div></section>");
-    $("#d" + n).append("<section class='ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all>'<div><a style='text-decoration: none; color: white;' href='./mapPage.html' data-transition='flip'>map</a> </div> </section>");
+    $("#d" + n).append('<section class="ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all" <div> <a style="text-decoration: none; color: white;"  data-transition="flip" id="map' + n + '"> Map </a> </div> </section>' );
+
+    $("#map" + n).click(function(){
+      sessionStorage.location = customer[i].compAddress;
+      console.log(sessionStorage);
+      window.location.href = "./mapPage.html";
+    });
 
     $("#d" + n).append("<div>Invoices for " + customer[i].comptName + "</div>");
 
@@ -115,8 +121,7 @@ function parseProducts(JsonObj) {
     $("#productHNav").append("<section class='list ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow' id='p" + n + "'" + '<div>ID: ' + products[i].prodId + ': </div>' + products[i].prodDiscr + ' (' + products[i].prodAmt + ')' + "</section><br />");
 
     // create a list of invoices/content under each product
-    //  $("#productHNav").append("<section id='d" + n + "'> <img src='../"+ products[i].img + "'></section><br />");
-
+    $("#productHNav").append("<section id='d" + n + "'> <img src='../"+ products[i].img + "'></section><br />");
     $("#d" + n).hide(); // hide the content div
     checkDisplay(n); // check to see if the product section is clicked
     n++;
