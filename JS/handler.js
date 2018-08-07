@@ -69,8 +69,8 @@ function parseCutomers(JsonObj) {
     //Get invoice Id
     //For each invoice Id, search invoice.json for the equiviliant id and print it out
     $("#d" + n).append("<p class='customer_info'>Customer Name: &nbsp;" + customer[i].comptName + "<br>Company Id:  &nbsp;" + customer[i].compId + "<br>Company Contact: &nbsp; " + customer[i].compContact + "<br>CompanyPhone:  &nbsp;" + customer[i].compPhone + "</p>");
-    $("#d" + n).append("<section class='ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all'> <div> <a style='text-decoration: none;' href='mailto:" + customer[i].compEmail + "'>Email</a> </div></section>");
-    $("#d" + n).append("<section class='ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all>'<div><a href='./mapPage.html' data-transition='flip'>map</a> </div> </section>");
+    $("#d" + n).append("<section class='ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all'> <div> <a style='text-decoration: none; color: white;' href='mailto:" + customer[i].compEmail + "'>Email</a> </div></section>");
+    $("#d" + n).append("<section class='ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all>'<div><a style='text-decoration: none; color: white;' href='./mapPage.html' data-transition='flip'>map</a> </div> </section>");
 
     $("#d" + n).append("<div>Invoices for " + customer[i].comptName + "</div>");
 
@@ -80,7 +80,8 @@ function parseCutomers(JsonObj) {
       //Do something to get the relative Id for the invoice
       let invObj = findInvoice(customer[i].invoice[j]); //Here we assumed we are doing a synchronous way, we should use a method to insure that this is done only once the file is parsed
 
-      $("#d" + n).append("<section class='popup ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all' id='inv" + k + "'>" + "<div style='color:white'>Invoice " + invObj.invNumber + '</div>' + "</section><br />").css({"background-color": "grey", "text-align": "center"}).width('600px');
+      $("#d" + n).append("<section class='popup ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all' id='inv" + k + "'>" + "<div style='color:white'>Invoice " + invObj.invNumber + '</div>' + "</section><br />").css({"background-color": "grey", "text-align": "center", "margin": "auto"}).width('600px');
+
       k++;
 
       // <span id='invoice2' style='visibility:hidden'> invoice info..... </span>
