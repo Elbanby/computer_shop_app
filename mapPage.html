@@ -12,72 +12,78 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
+  <script async defe
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX7IAy6_N8kFUQOoUr3ogJiBW0uO9TlvI&callback=initMap">
+  </script>
+  <script>
+  var map;
+  var marker;
+
+  function initMap() {
+      console.log(sessionStorage.location);
+      //Retrive the location of the map
+      let mapTag = document.getElementById('map');
+      //create a map object literal
+      var mapPosition = {
+        center: {
+          lat: 37.791350,
+          lng: -122.435883
+        },
+        zoom: 20
+      }
+      //New create the map and display it
+      map = new google.maps.Map(mapTag, mapPosition);
+      //Create a marker position object
+      var markerPosition = {
+        position: mapPosition.center,
+        map: map
+      }
+      //Now create a marker
+      marker = new google.maps.Marker(markerPosition);
+      showLocation();
+  }
+
+  function showLocation() {
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({
+      address: sessionStorage.location
+    }, (results, status) => {
+      if (status == "OK") {
+        map.setCenter(results[0].geometry.location);
+        marker = new google.maps.Marker({
+          position: results[0].geometry.location,
+          map: map,
+          animation: google.maps.Animation.DROP,
+        });
+        var info = new google.maps.InfoWindow ({
+          content: sessionStorage.location,
+          maxWidth: 150
+        });
+
+        marker.addListener('click',()=>{
+          info.open(map,marker);
+        });
+
+      } else {
+        alert('Error. Address is not found')
+      }
+    });
+  }
+  </script>
   <body>
     <div data-role="page" id="map-page" data-url="map-page">
         <div data-role="header" data-theme="a">
-        <h1>Map</h1>
+        <h1>Map </h1>
         </div>
-        <div role="main" class="ui-content" id="map" style="width:50%;height:400px;background:yellow;margin: auto;">
+        <div role="main" class="ui-content" id="map" style="width:50%;height:400px;margin: auto;">
             <!-- map loads here... -->
         </div>
-        <script async defe
-              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX7IAy6_N8kFUQOoUr3ogJiBW0uO9TlvI&callback=initMap">
-        </script>
-        <script>
-        var map;
-        var marker;
+        <div id="footer" data-role="footer">
+          <div style="text-align:center;" >
+            <a href="#" class="ui-btn ui-btn-inline" data-rel="back"> Previous page</a>
+          </div>
+        </div>
 
-        function initMap() {
-            console.log(sessionStorage.location);
-            //Retrive the location of the map
-            let mapTag = document.getElementById('map');
-            //create a map object literal
-            var mapPosition = {
-              center: {
-                lat: 37.791350,
-                lng: -122.435883
-              },
-              zoom: 20
-            }
-            //New create the map and display it
-            map = new google.maps.Map(mapTag, mapPosition);
-            //Create a marker position object
-            var markerPosition = {
-              position: mapPosition.center,
-              map: map
-            }
-            //Now create a marker
-            marker = new google.maps.Marker(markerPosition);
-            showLocation();
-        }
-
-        function showLocation() {
-          var geocoder = new google.maps.Geocoder();
-          geocoder.geocode({
-            address: sessionStorage.location
-          }, (results, status) => {
-            if (status == "OK") {
-              map.setCenter(results[0].geometry.location);
-              marker = new google.maps.Marker({
-                position: results[0].geometry.location,
-                map: map,
-                animation: google.maps.Animation.DROP,
-              });
-              var info = new google.maps.InfoWindow ({
-                content: sessionStorage.location,
-                maxWidth: 150
-              });
-
-              marker.addListener('click',()=>{
-                info.open(map,marker);
-              });
-
-            } else {
-              alert('Error. Address is not found')
-            }
-          });
-        }
-        </script>
     </div>
 
   </body>
