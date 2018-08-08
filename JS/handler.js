@@ -121,7 +121,7 @@ function parseProducts(JsonObj) {
     $("#productHNav").append("<section class='list ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow' id='p" + n + "'" + '<div>ID: ' + products[i].prodId + ': </div>' + products[i].prodDiscr + ' (' + products[i].prodAmt + ')' + "</section><br />");
 
     // create a list of invoices/content under each product
-    $("#productHNav").append("<section id='d" + n + "'> <img src='../"+ products[i].img + "'></section><br />");
+    $("#productHNav").append("<section id='d" + n + "'> <img src='./"+ products[i].img + "'></section><br />");
     $("#d" + n).hide(); // hide the content div
     checkDisplay(n); // check to see if the product section is clicked
     n++;
