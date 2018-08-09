@@ -107,7 +107,7 @@
 		</div>
 
 		<div role="main" class="ui-content">
-			<input type="text" id="searchCustomer" placeholder="Search for customer..">
+			<input type="text" id="searchCustomer" onkeypress="search(event)" placeholder="Search for customer..">
 			<div id="customerHNav"></div>
 		</div>
 		<div data-role="footer" data-position="inline">
@@ -132,7 +132,7 @@
 
 
 		<div role="main" class="ui-content">
-			<input type="text" id="searchProduct" placeholder="Search for customer..">
+			<input type="text" id="searchProduct" onkeypress="search(event)" placeholder="Search for products..">
 		<section class='ui-grid-a'>
 			<div id="productHNav" class='ui-block-solo'></div>
 		</section>

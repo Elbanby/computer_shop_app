@@ -1,6 +1,8 @@
 var n = 1;
 var k = 0;
 var a = 1;
+var customersArray = new Array();
+var productsArray = new Array();
 
 $(document).ready(() => {
   let g_invoiceObject;
@@ -51,7 +53,8 @@ $(document).ready(() => {
 
     for (let i = 0; i < numCustomers; i++) {
       let id = customer[i].compId;
-
+      //Add customer name to customer array
+      customersArray[n] = customer[i].comptName.toUpperCase();
       $("#customerHNav").append("<section class='list ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow' id='p" + n + "'" + '<div>' + customer[i].comptName + '</div>' + "</section><br />");
 
       $("#customerHNav").append("<article id='d" + n + "'>" + "<p>Customer information: </p>" + "</article><br />");
@@ -103,6 +106,7 @@ $(document).ready(() => {
     let products = JsonObj.product;
 
     for (let i = 0; i < products.length; i++) {
+      productsArray[n] = products[i].prodDiscr.toUpperCase();
       $("#productHNav").append("<section class='list ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow' id='p" + n + "'" + '<div>ID: ' + products[i].prodId + ': </div>' + products[i].prodDiscr + ' (' + products[i].prodAmt + ')' + "</section><br />");
       $("#productHNav").append("<section id='d" + n + "'><div> Product description:&nbsp;" + products[i].prodDiscr + "<br>Product id:&nbsp;" + products[i].prodId + "<br>Price:&nbsp;" + products[i].prodAmt + "</div> <img src='./" + products[i].img + "'></section><br />");
       // hide the content div
@@ -123,4 +127,23 @@ function checkDisplay(n) {
     // toggle (show/hide) content div
     $("#d" + n).toggle("fast");
   });
+}
+
+function search(e) {
+  let index = 0;
+  console.log("hsda");
+  if (e.target.id === "searchProduct") {
+    if (e.keyCode == 13) {
+      let query = document.getElementById("searchProduct").value.toUpperCase();
+      index = productsArray.indexOf(query);
+    }
+  } else {
+    if (e.keyCode == 13) {
+      let query = document.getElementById("searchCustomer").value.toUpperCase();
+      index = customersArray.indexOf(query);
+    }
+  }
+  if (index != -1) {
+    $("#d" + index).toggle();
+  }
 }
