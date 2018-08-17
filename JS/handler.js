@@ -78,7 +78,7 @@ $(document).ready(() => {
         //Here we assumed we are doing a synchronous way, we should use a method to insure that this is done only once the file is parsed
         let invObj = findInvoice(customer[i].invoice[j]);
 
-        $("#d" + n).append("<section class='popup ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all' id='inv" + k + "'>" + "<div style='color:white'>Invoice " + invObj.invNumber + '</div>' + "</section><br />").css({"background-color": "grey", "text-align": "center", "margin": "auto"}).width('600px');
+        $("#d" + n).append("<section class='popup ui-btn ui-btn-inline ui-corner-all' id='inv" + k + "'>" + "<div style='color:white'>Invoice " + invObj.invNumber + '</div>' + "</section><br />").css({"background-color": "grey", "text-align": "center", "margin": "auto"}).width('600px');
 
         k++;
 
@@ -108,7 +108,7 @@ $(document).ready(() => {
     for (let i = 0; i < products.length; i++) {
       productsArray[n] = products[i].prodDiscr.toUpperCase();
       $("#productHNav").append("<section class='list ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow' id='p" + n + "'" + '<div>ID: ' + products[i].prodId + ': </div>' + products[i].prodDiscr + ' (' + products[i].prodAmt + ')' + "</section><br />");
-      $("#productHNav").append("<section id='d" + n + "'><div> Product description:&nbsp;" + products[i].prodDiscr + "<br>Product id:&nbsp;" + products[i].prodId + "<br>Price:&nbsp;" + products[i].prodAmt + "</div> <img src='./" + products[i].img + "'></section><br />");
+      $("#productHNav").append("<section id='d" + n + "'><div> Product description:&nbsp;" + products[i].prodDiscr + "<br>Product id:&nbsp;" + products[i].prodId + "<br>Price:&nbsp;" + products[i].prodAmt + "</div> <img src='./" + products[i].img + "'></section><br />").css("text-align", "center");
       // hide the content div
       $("#d" + n).hide();
       // check to see if the product section is clicked
